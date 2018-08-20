@@ -1,0 +1,29 @@
+{
+  "name": "qq_connenct_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felaozhiyong/qq_connenct_demo.git"
+  },
+  "author": "ZhiYongLao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felaozhiyong/qq_connenct_demo/issues"
+  },
+  "homepage": "https://github.com/felaozhiyong/qq_connenct_demo#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jquery": "^3.3.1",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static-server": "^1.3.4",
+    "koa-views": "^6.1.4",
+    "pug": "^2.0.3"
+  }
+}

@@ -1,0 +1,41 @@
+extends layout
+
+block styles
+    link(href='/static/styles/login.css' type='text/css' rel='stylesheet')
+
+block content
+    p Iframe弹窗方式===================================================>
+    span(id='login_btn_modal')
+    p 打开新窗口的方式=================================================>
+    span(id='login_btn')
+    p 如果这些你都不喜欢，还可以自己动手嵌入iframe=====================>
+    // 自己添加一个按钮
+    img(id="custom_button" src="/static/images/Connect_logo_5.png")
+    //    纯html大概长这样：
+    //    <div id="modal"
+    //        style="position: absolute; visibility: visible; width: 500px;
+    //        height: 570px; padding: 0px; margin: 0px;">
+    //        <iframe id="login" src="" frameborder="0" width="100%" height="100%"></iframe>
+    //    </div>
+    div(
+        id='modal',
+        style="position: absolute; visibility: hidden; width: 750px; height:500px; top: 30px;border: 1px solid #eee; " +
+        "padding-top: -60px; overflow: hidden; background: white;"
+    )
+
+        div(
+            style="background:#51b7ec; height: 30px; line-height: 30px; width:100%; position: absolute;" +
+                "z-index: 60; text-align: right;"
+        ) #[span(id="close_btn" style="cursor: pointer;") 关闭&emsp;]
+        iframe(id='login', frameborder="0", width="100%", height="450", style="margin-top: -15px")
+
+block scripts
+    // 打开新窗口的方式可以不需要跳转至代理页面，可以直接去http://localhost:3000/home
+    // 注意：回调地址需要在官网应用管理详情中添加后才能跳转
+    script(
+        src='//connect.qq.com/qc_jssdk.js'
+        data-appid="101490224"
+        data-redirecturi="http://localhost:3000/proxy"
+        charset="utf-8"
+    )
+    script(src="/static/js/login.js")

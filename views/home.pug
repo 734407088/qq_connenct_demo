@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1 hello ! This's GayHub.
+    h1 welcome #[span(id='name') #{name}] !
+    span(id='login-btn')
+block scripts
+    script(
+        src='//connect.qq.com/qc_jssdk.js'
+        data-appid="101490224"
+        data-redirecturi="http://localhost:3000/home"
+        charset="utf-8"
+    )
+    script(src='/static/js/home.js')
